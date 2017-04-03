@@ -1,0 +1,5131 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/nkzawa/socket.io-stream#readme"
+
+    >socket.io-stream (v0.9.1)</a>
+</h1>
+<h4>stream for socket.io</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream">module socket.io-stream</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">socket.io-stream.</span>forceBase64</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>Buffer
+            <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>IOStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>Socket
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.createBlobReadStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>createBlobReadStream
+            <span class="apidocSignatureSpan">(blob, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.createStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>createStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.io-stream.Buffer">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Buffer
+            <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.io-stream.IOStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.IOStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.io-stream.Socket">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Socket
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.io-stream.blob_read_stream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.blob_read_stream
+            <span class="apidocSignatureSpan">(blob, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.io-stream.socket_io_stream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.socket_io_stream
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Buffer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.IOStream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Socket.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.blob_read_stream.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.Buffer">module socket.io-stream.Buffer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.Buffer">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>Buffer
+            <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.alloc">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>alloc
+            <span class="apidocSignatureSpan">(size, fill, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.allocUnsafe">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>allocUnsafe
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.allocUnsafeSlow">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>allocUnsafeSlow
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.byteLength">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>byteLength
+            <span class="apidocSignatureSpan">(string, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.compare">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>compare
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.concat">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>concat
+            <span class="apidocSignatureSpan">(list, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.from">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>from
+            <span class="apidocSignatureSpan">(value, encodingOrOffset, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.isBuffer">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>isBuffer
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.isEncoding">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>isEncoding
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>poolSize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.Buffer.prototype">module socket.io-stream.Buffer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.asciiSlice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>asciiSlice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.asciiWrite">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>asciiWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.base64Slice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>base64Slice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.base64Write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>base64Write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.compare">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>compare
+            <span class="apidocSignatureSpan">(target, start, end, thisStart, thisEnd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.copy">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>copy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.equals">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>equals
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.fill">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>fill
+            <span class="apidocSignatureSpan">(val, start, end, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.hexSlice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>hexSlice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.hexWrite">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>hexWrite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.includes">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>includes
+            <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.indexOf">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>indexOf
+            <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.inspect">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>inspect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.lastIndexOf">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>lastIndexOf
+            <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.latin1Slice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>latin1Slice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.latin1Write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>latin1Write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readDoubleBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readDoubleBE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readDoubleLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readDoubleLE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readFloatBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readFloatBE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readFloatLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readFloatLE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt16BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt16BE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt16LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt16LE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt32BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt32BE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt32LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt32LE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt8">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt8
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readIntBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readIntBE
+            <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readIntLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readIntLE
+            <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt16BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt16BE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt16LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt16LE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt32BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt32BE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt32LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt32LE
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt8">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt8
+            <span class="apidocSignatureSpan">(offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUIntBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUIntBE
+            <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.readUIntLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUIntLE
+            <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.slice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>slice
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.swap16">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap16
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.swap32">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap32
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.swap64">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap64
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.toJSON">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.toString">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.ucs2Slice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>ucs2Slice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.ucs2Write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>ucs2Write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.utf8Slice">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>utf8Slice
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.utf8Write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>utf8Write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>write
+            <span class="apidocSignatureSpan">(string, offset, length, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeDoubleBE
+            <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeDoubleLE
+            <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeFloatBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeFloatBE
+            <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeFloatLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeFloatLE
+            <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt16BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt16BE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt16LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt16LE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt32BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt32BE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt32LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt32LE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt8">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt8
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeIntBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeIntBE
+            <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeIntLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeIntLE
+            <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt16BE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt16LE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32BE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt32BE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32LE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt32LE
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt8">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt8
+            <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUIntBE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUIntBE
+            <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUIntLE">
+            function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUIntLE
+            <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.IOStream">module socket.io-stream.IOStream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.IOStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>IOStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.super_">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.IOStream.prototype">module socket.io-stream.IOStream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._done">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_done
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._end">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._onend">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onend
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._onerror">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onerror
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._onfinish">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onfinish
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._onread">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onread
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._onwrite">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onwrite
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._read">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_read
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype._write">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.IOStream.prototype.destroy">
+            function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.Socket">module socket.io-stream.Socket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.Socket">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>Socket
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.super_">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">socket.io-stream.Socket.</span>events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">socket.io-stream.Socket.</span>event</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.Socket.prototype">module socket.io-stream.Socket.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._end">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_end
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._error">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_error
+            <span class="apidocSignatureSpan">(id, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._ondecode">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_ondecode
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._ondisconnect">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_ondisconnect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onencode">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onencode
+            <span class="apidocSignatureSpan">(stream)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onend">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onend
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onerror">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onerror
+            <span class="apidocSignatureSpan">(id, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onread">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onread
+            <span class="apidocSignatureSpan">(id, size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onstream">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onstream
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._onwrite">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onwrite
+            <span class="apidocSignatureSpan">(id, chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._read">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_read
+            <span class="apidocSignatureSpan">(id, size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._stream">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_stream
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype._write">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_write
+            <span class="apidocSignatureSpan">(id, chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype.cleanup">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>cleanup
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype.emit">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>emit
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.Socket.prototype.on">
+            function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.blob_read_stream">module socket.io-stream.blob_read_stream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.blob_read_stream.blob_read_stream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>blob_read_stream
+            <span class="apidocSignatureSpan">(blob, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.blob_read_stream.super_">
+            function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.blob_read_stream.prototype">module socket.io-stream.blob_read_stream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._onerror">
+            function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_onerror
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._onload">
+            function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_onload
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._read">
+            function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_read
+            <span class="apidocSignatureSpan">(size)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.parser">module socket.io-stream.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.parser.Decoder">
+            function <span class="apidocSignatureSpan">socket.io-stream.parser.</span>Decoder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.parser.Encoder">
+            function <span class="apidocSignatureSpan">socket.io-stream.parser.</span>Encoder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.socket.io-stream.socket_io_stream">module socket.io-stream.socket_io_stream</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>forceBase64</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.socket_io_stream">
+            function <span class="apidocSignatureSpan">socket.io-stream.</span>socket_io_stream
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.Buffer">
+            function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>Buffer
+            <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.IOStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>IOStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.Socket">
+            function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>Socket
+            <span class="apidocSignatureSpan">(sio, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.createBlobReadStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>createBlobReadStream
+            <span class="apidocSignatureSpan">(blob, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.socket.io-stream.socket_io_stream.createStream">
+            function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>createStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream" id="apidoc.module.socket.io-stream">module socket.io-stream</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer" id="apidoc.element.socket.io-stream.Buffer">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>Buffer
+        <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(arg, encodingOrOffset, length) {
+  // Common case.
+  if (typeof arg === &#x27;number&#x27;) {
+    if (typeof encodingOrOffset === &#x27;string&#x27;) {
+      throw new Error(
+        &#x27;If encoding is specified then the first argument must be a string&#x27;
+      );
+    }
+    return Buffer.allocUnsafe(arg);
+  }
+  return Buffer.from(arg, encodingOrOffset, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ss.Buffer
+
+[Node Buffer](https://nodejs.org/api/buffer.html) class to use on browser, which is exposed for convenience. On Node environment
+, you should just use normal `Buffer`.
+
+```js
+var stream = ss.createStream();
+stream.write(new ss.<span class="apidocCodeKeywordSpan">Buffer</span>([0, 1, 2]));
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream" id="apidoc.element.socket.io-stream.IOStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>IOStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IOStream(options) {
+  if (!(this instanceof IOStream)) {
+    return new IOStream(options);
+  }
+
+  IOStream.super_.call(this, options);
+
+  this.options = options;
+  this.id = uuid();
+  this.socket = null;
+
+  // Buffers
+  this.pushBuffer = [];
+  this.writeBuffer = [];
+
+  // Op states
+  this._readable = false;
+  this._writable = false;
+  this.destroyed = false;
+
+  // default to *not* allowing half open sockets
+  this.allowHalfOpen = options &#x26;&#x26; options.allowHalfOpen || false;
+
+  this.on(&#x27;finish&#x27;, this._onfinish);
+  this.on(&#x27;end&#x27;, this._onend);
+  this.on(&#x27;error&#x27;, this._onerror);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket" id="apidoc.element.socket.io-stream.Socket">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>Socket
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Socket(sio, options) {
+  if (!(this instanceof Socket)) {
+    return new Socket(sio, options);
+  }
+
+  EventEmitter.call(this);
+
+  options = options || {};
+
+  this.sio = sio;
+  this.forceBase64 = !!options.forceBase64;
+  this.streams = {};
+  this.encoder = new parser.Encoder();
+  this.decoder = new parser.Decoder();
+
+  var eventName = exports.event;
+  sio.on(eventName, bind(this, emit));
+  sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+  sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+  sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+  sio.on(eventName + &#x27;-error&#x27;, bind(this, &#x27;_onerror&#x27;));
+  sio.on(&#x27;error&#x27;, bind(this, emit, &#x27;error&#x27;));
+  sio.on(&#x27;disconnect&#x27;, bind(this, &#x27;_ondisconnect&#x27;));
+
+  this.encoder.on(&#x27;stream&#x27;, bind(this, &#x27;_onencode&#x27;));
+  this.decoder.on(&#x27;stream&#x27;, bind(this, &#x27;_ondecode&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.createBlobReadStream" id="apidoc.element.socket.io-stream.createBlobReadStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>createBlobReadStream
+        <span class="apidocSignatureSpan">(blob, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBlobReadStream = function (blob, options) {
+  return new BlobReadStream(blob, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  $(&#x27;#file&#x27;).change(function(e) {
+    var file = e.target.files[0];
+    var stream = ss.createStream();
+
+    // upload a file to the server.
+    ss(socket).emit(&#x27;file&#x27;, stream, {size: file.size});
+    ss.<span class="apidocCodeKeywordSpan">createBlobReadStream</span>(file).pipe(stream);
+  });
+});
+&#x3c;/script&#x3e;
+```
+
+#### Upload progress
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.createStream" id="apidoc.element.socket.io-stream.createStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>createStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createStream = function (options) {
+  return new IOStream(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Client:
+
+```js
+var io = require(&#x27;socket.io-client&#x27;);
+var ss = require(&#x27;socket.io-stream&#x27;);
+
+var socket = io.connect(&#x27;http://example.com/user&#x27;);
+var stream = ss.<span class="apidocCodeKeywordSpan">createStream</span>();
+var filename = &#x27;profile.jpg&#x27;;
+
+ss(socket).emit(&#x27;profile-image&#x27;, stream, {name: filename});
+fs.createReadStream(filename).pipe(stream);
+```
+
+You can stream data from a client to server, and vice versa.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.io-stream.Buffer" id="apidoc.element.socket.io-stream.io-stream.Buffer">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Buffer
+        <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(arg, encodingOrOffset, length) {
+  // Common case.
+  if (typeof arg === &#x27;number&#x27;) {
+    if (typeof encodingOrOffset === &#x27;string&#x27;) {
+      throw new Error(
+        &#x27;If encoding is specified then the first argument must be a string&#x27;
+      );
+    }
+    return Buffer.allocUnsafe(arg);
+  }
+  return Buffer.from(arg, encodingOrOffset, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.io-stream.IOStream" id="apidoc.element.socket.io-stream.io-stream.IOStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.IOStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IOStream(options) {
+  if (!(this instanceof IOStream)) {
+    return new IOStream(options);
+  }
+
+  IOStream.super_.call(this, options);
+
+  this.options = options;
+  this.id = uuid();
+  this.socket = null;
+
+  // Buffers
+  this.pushBuffer = [];
+  this.writeBuffer = [];
+
+  // Op states
+  this._readable = false;
+  this._writable = false;
+  this.destroyed = false;
+
+  // default to *not* allowing half open sockets
+  this.allowHalfOpen = options &#x26;&#x26; options.allowHalfOpen || false;
+
+  this.on(&#x27;finish&#x27;, this._onfinish);
+  this.on(&#x27;end&#x27;, this._onend);
+  this.on(&#x27;error&#x27;, this._onerror);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.io-stream.Socket" id="apidoc.element.socket.io-stream.io-stream.Socket">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.Socket
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Socket(sio, options) {
+  if (!(this instanceof Socket)) {
+    return new Socket(sio, options);
+  }
+
+  EventEmitter.call(this);
+
+  options = options || {};
+
+  this.sio = sio;
+  this.forceBase64 = !!options.forceBase64;
+  this.streams = {};
+  this.encoder = new parser.Encoder();
+  this.decoder = new parser.Decoder();
+
+  var eventName = exports.event;
+  sio.on(eventName, bind(this, emit));
+  sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+  sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+  sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+  sio.on(eventName + &#x27;-error&#x27;, bind(this, &#x27;_onerror&#x27;));
+  sio.on(&#x27;error&#x27;, bind(this, emit, &#x27;error&#x27;));
+  sio.on(&#x27;disconnect&#x27;, bind(this, &#x27;_ondisconnect&#x27;));
+
+  this.encoder.on(&#x27;stream&#x27;, bind(this, &#x27;_onencode&#x27;));
+  this.decoder.on(&#x27;stream&#x27;, bind(this, &#x27;_ondecode&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.io-stream.blob_read_stream" id="apidoc.element.socket.io-stream.io-stream.blob_read_stream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.blob_read_stream
+        <span class="apidocSignatureSpan">(blob, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BlobReadStream(blob, options) {
+  if (!(this instanceof BlobReadStream)) {
+    return new BlobReadStream(blob, options);
+  }
+
+  Readable.call(this, options);
+
+  options = options || {};
+  this.blob = blob;
+  this.slice = blob.slice || blob.webkitSlice || blob.mozSlice;
+  this.start = 0;
+  this.sync = options.synchronous || false;
+
+  var fileReader;
+
+  if (options.synchronous) {
+    fileReader = this.fileReader = new FileReaderSync();
+  } else {
+    fileReader = this.fileReader = new FileReader();
+  }
+
+  fileReader.onload = bind(this, &#x27;_onload&#x27;);
+  fileReader.onerror = bind(this, &#x27;_onerror&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.io-stream.socket_io_stream" id="apidoc.element.socket.io-stream.io-stream.socket_io_stream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>io-stream.socket_io_stream
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lookup(sio, options) {
+  options = options || {};
+  if (null == options.forceBase64) {
+    options.forceBase64 = exports.forceBase64;
+  }
+
+  if (!sio._streamSocket) {
+    sio._streamSocket = new Socket(sio, options);
+  }
+  return sio._streamSocket;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.Buffer" id="apidoc.module.socket.io-stream.Buffer">module socket.io-stream.Buffer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.Buffer" id="apidoc.element.socket.io-stream.Buffer.Buffer">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>Buffer
+        <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(arg, encodingOrOffset, length) {
+  // Common case.
+  if (typeof arg === &#x27;number&#x27;) {
+    if (typeof encodingOrOffset === &#x27;string&#x27;) {
+      throw new Error(
+        &#x27;If encoding is specified then the first argument must be a string&#x27;
+      );
+    }
+    return Buffer.allocUnsafe(arg);
+  }
+  return Buffer.from(arg, encodingOrOffset, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ss.Buffer
+
+[Node Buffer](https://nodejs.org/api/buffer.html) class to use on browser, which is exposed for convenience. On Node environment
+, you should just use normal `Buffer`.
+
+```js
+var stream = ss.createStream();
+stream.write(new ss.<span class="apidocCodeKeywordSpan">Buffer</span>([0, 1, 2]));
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.alloc" id="apidoc.element.socket.io-stream.Buffer.alloc">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>alloc
+        <span class="apidocSignatureSpan">(size, fill, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">alloc = function (size, fill, encoding) {
+  assertSize(size);
+  if (size &#x3e; 0 &#x26;&#x26; fill !== undefined) {
+    // Since we are filling anyway, don&#x27;t zero fill initially.
+    // Only pay attention to encoding if it&#x27;s a string. This
+    // prevents accidentally sending in a number that would
+    // be interpretted as a start offset.
+    if (typeof encoding !== &#x27;string&#x27;)
+      encoding = undefined;
+    return createUnsafeBuffer(size).fill(fill, encoding);
+  }
+  return new FastBuffer(size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var buffer = require(&#x27;buffer&#x27;);
+var Buffer = buffer.Buffer;
+var SlowBuffer = buffer.SlowBuffer;
+var MAX_LEN = buffer.kMaxLength || 2147483647;
+exports.alloc = function alloc(size, fill, encoding) {
+if (typeof Buffer.alloc === &#x27;function&#x27;) {
+  return Buffer.<span class="apidocCodeKeywordSpan">alloc</span>(size, fill, encoding);
+}
+if (typeof encoding === &#x27;number&#x27;) {
+  throw new TypeError(&#x27;encoding must not be number&#x27;);
+}
+if (typeof size !== &#x27;number&#x27;) {
+  throw new TypeError(&#x27;size must be a number&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.allocUnsafe" id="apidoc.element.socket.io-stream.Buffer.allocUnsafe">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>allocUnsafe
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allocUnsafe = function (size) {
+  assertSize(size);
+  return allocate(size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} else {
+  buf.fill(_fill);
+}
+return buf;
+}
+exports.allocUnsafe = function allocUnsafe(size) {
+if (typeof Buffer.allocUnsafe === &#x27;function&#x27;) {
+  return Buffer.<span class="apidocCodeKeywordSpan">allocUnsafe</span>(size);
+}
+if (typeof size !== &#x27;number&#x27;) {
+  throw new TypeError(&#x27;size must be a number&#x27;);
+}
+if (size &#x3e; MAX_LEN) {
+  throw new RangeError(&#x27;size is too large&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.allocUnsafeSlow" id="apidoc.element.socket.io-stream.Buffer.allocUnsafeSlow">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>allocUnsafeSlow
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allocUnsafeSlow = function (size) {
+  assertSize(size);
+  return createUnsafeBuffer(size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+
+throw new TypeError(&#x27;First argument must be a string, Buffer, &#x27; + &#x27;ArrayBuffer, Array, or array-like object.&#x27
+;);
+}
+exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
+if (typeof Buffer.allocUnsafeSlow === &#x27;function&#x27;) {
+  return Buffer.<span class="apidocCodeKeywordSpan">allocUnsafeSlow</span>(size);
+}
+if (typeof size !== &#x27;number&#x27;) {
+  throw new TypeError(&#x27;size must be a number&#x27;);
+}
+if (size &#x3e;= MAX_LEN) {
+  throw new RangeError(&#x27;size is too large&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.byteLength" id="apidoc.element.socket.io-stream.Buffer.byteLength">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>byteLength
+        <span class="apidocSignatureSpan">(string, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function byteLength(string, encoding) {
+  if (typeof string !== &#x27;string&#x27;) {
+    if (ArrayBuffer.isView(string) || isArrayBuffer(string) ||
+        isSharedArrayBuffer(string)) {
+      return string.byteLength;
+    }
+
+    string = &#x27;&#x27; + string;
+  }
+
+  var len = string.length;
+  if (len === 0)
+    return 0;
+
+  // Use a for loop to avoid recursion
+  var loweredCase = false;
+  for (;;) {
+    switch (encoding) {
+      case &#x27;ascii&#x27;:
+      case &#x27;latin1&#x27;:
+      case &#x27;binary&#x27;:
+        return len;
+
+      case &#x27;utf8&#x27;:
+      case &#x27;utf-8&#x27;:
+      case undefined:
+        return binding.byteLengthUtf8(string);
+
+      case &#x27;ucs2&#x27;:
+      case &#x27;ucs-2&#x27;:
+      case &#x27;utf16le&#x27;:
+      case &#x27;utf-16le&#x27;:
+        return len * 2;
+
+      case &#x27;hex&#x27;:
+        return len &#x3e;&#x3e;&#x3e; 1;
+
+      case &#x27;base64&#x27;:
+        return base64ByteLength(string, len);
+
+      default:
+        // The C++ binding defaulted to UTF8, we should too.
+        if (loweredCase)
+          return binding.byteLengthUtf8(string);
+
+        encoding = (&#x27;&#x27; + encoding).toLowerCase();
+        loweredCase = true;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.compare" id="apidoc.element.socket.io-stream.Buffer.compare">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>compare
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compare(a, b) {
+  if (!(a instanceof Buffer) ||
+      !(b instanceof Buffer)) {
+    throw new TypeError(&#x27;Arguments must be Buffers&#x27;);
+  }
+
+  if (a === b) {
+    return 0;
+  }
+
+  return binding.compare(a, b);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (arguments.length === 0) return utf8Slice(this, 0, length)
+return slowToString.apply(this, arguments)
+}
+
+Buffer.prototype.equals = function equals (b) {
+if (!Buffer.isBuffer(b)) throw new TypeError(&#x27;Argument must be a Buffer&#x27;)
+if (this === b) return true
+return Buffer.<span class="apidocCodeKeywordSpan">compare</span>(this, b) === 0
+}
+
+Buffer.prototype.inspect = function inspect () {
+var str = &#x27;&#x27;
+var max = exports.INSPECT_MAX_BYTES
+if (this.length &#x3e; 0) {
+  str = this.toString(&#x27;hex&#x27;, 0, max).match(/.{2}/g).join(&#x27; &#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.concat" id="apidoc.element.socket.io-stream.Buffer.concat">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>concat
+        <span class="apidocSignatureSpan">(list, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">concat = function (list, length) {
+  var i;
+  if (!Array.isArray(list))
+    throw new TypeError(&#x27;&#x22;list&#x22; argument must be an Array of Buffers&#x27;);
+
+  if (list.length === 0)
+    return new FastBuffer();
+
+  if (length === undefined) {
+    length = 0;
+    for (i = 0; i &#x3c; list.length; i++)
+      length += list[i].length;
+  } else {
+    length = length &#x3e;&#x3e;&#x3e; 0;
+  }
+
+  var buffer = Buffer.allocUnsafe(length);
+  var pos = 0;
+  for (i = 0; i &#x3c; list.length; i++) {
+    var buf = list[i];
+    if (!Buffer.isBuffer(buf))
+      throw new TypeError(&#x27;&#x22;list&#x22; argument must be an Array of Buffers&#x27;);
+    buf.copy(buffer, pos);
+    pos += buf.length;
+  }
+
+  // Note: `length` is always equal to `buffer.length` at this point
+  if (pos &#x3c; length) {
+    // Zero-fill the remaining bytes if the specified `length` was more than
+    // the actual total length, i.e. if we have some remaining allocated bytes
+    // there were not initialized.
+    buffer.fill(0, pos, length);
+  }
+
+  return buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     args = self.decoder.decode(args);
+     ack.apply(this, args);
+   };
+ }
+
+ args = this.encoder.encode(args);
+ var sio = this.sio;
+ sio.emit.apply(sio, [exports.event, type].<span class="apidocCodeKeywordSpan">concat</span>(args));
+};
+
+/**
+* Notifies the read event.
+*
+* @api private
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.from" id="apidoc.element.socket.io-stream.Buffer.from">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>from
+        <span class="apidocSignatureSpan">(value, encodingOrOffset, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">from = function (value, encodingOrOffset, length) {
+  if (typeof value === &#x27;number&#x27;)
+    throw new TypeError(&#x27;&#x22;value&#x22; argument must not be a number&#x27;);
+
+  if (isArrayBuffer(value) || isSharedArrayBuffer(value))
+    return fromArrayBuffer(value, encodingOrOffset, length);
+
+  if (typeof value === &#x27;string&#x27;)
+    return fromString(value, encodingOrOffset);
+
+  return fromObject(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (size &#x3e; MAX_LEN) {
+  throw new RangeError(&#x27;size is too large&#x27;);
+}
+return new Buffer(size);
+}
+exports.from = function from(value, encodingOrOffset, length) {
+if (typeof Buffer.from === &#x27;function&#x27; &#x26;&#x26; (!global.Uint8Array || Uint8Array.from !== Buffer.from)) {
+  return Buffer.<span class="apidocCodeKeywordSpan">from</span>(value, encodingOrOffset, length);
+}
+if (typeof value === &#x27;number&#x27;) {
+  throw new TypeError(&#x27;&#x22;value&#x22; argument must not be a number&#x27;);
+}
+if (typeof value === &#x27;string&#x27;) {
+  return new Buffer(value, encodingOrOffset);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.isBuffer" id="apidoc.element.socket.io-stream.Buffer.isBuffer">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>isBuffer
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBuffer(b) {
+  return b instanceof Buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Requests to write a chunk.
+ *
+ * @api private
+ */
+Socket.prototype._write = function(id, chunk, encoding, callback) {
+if (Buffer.<span class="apidocCodeKeywordSpan">isBuffer</span>(chunk)) {
+  if (this.forceBase64) {
+    encoding = &#x27;base64&#x27;;
+    chunk = chunk.toString(encoding);
+  } else if (!global.Buffer) {
+    // socket.io can&#x27;t handle Buffer when using browserify.
+    if (chunk.toArrayBuffer) {
+      chunk = chunk.toArrayBuffer();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.isEncoding" id="apidoc.element.socket.io-stream.Buffer.isEncoding">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.</span>isEncoding
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEncoding = function (encoding) {
+  return typeof encoding === &#x27;string&#x27; &#x26;&#x26;
+         typeof internalUtil.normalizeEncoding(encoding) === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+function fromString (that, string, encoding) {
+if (typeof encoding !== &#x27;string&#x27; || encoding === &#x27;&#x27;) {
+  encoding = &#x27;utf8&#x27;
+}
+
+if (!Buffer.<span class="apidocCodeKeywordSpan">isEncoding</span>(encoding)) {
+  throw new TypeError(&#x27;&#x22;encoding&#x22; must be a valid string encoding&#x27;)
+}
+
+var length = byteLength(string, encoding) | 0
+that = createBuffer(that, length)
+
+var actual = that.write(string, encoding)
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.Buffer.prototype" id="apidoc.module.socket.io-stream.Buffer.prototype">module socket.io-stream.Buffer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.asciiSlice" id="apidoc.element.socket.io-stream.Buffer.prototype.asciiSlice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>asciiSlice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function asciiSlice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.asciiWrite" id="apidoc.element.socket.io-stream.Buffer.prototype.asciiWrite">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>asciiWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function asciiWrite() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.base64Slice" id="apidoc.element.socket.io-stream.Buffer.prototype.base64Slice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>base64Slice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64Slice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.base64Write" id="apidoc.element.socket.io-stream.Buffer.prototype.base64Write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>base64Write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function base64Write() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.compare" id="apidoc.element.socket.io-stream.Buffer.prototype.compare">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>compare
+        <span class="apidocSignatureSpan">(target, start, end, thisStart, thisEnd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compare(target, start, end, thisStart, thisEnd) {
+
+  if (!(target instanceof Buffer))
+    throw new TypeError(&#x27;Argument must be a Buffer&#x27;);
+  if (arguments.length === 1)
+    return compare_(this, target);
+
+  if (start === undefined)
+    start = 0;
+  else if (start &#x3c; 0)
+    throw new RangeError(&#x27;out of range index&#x27;);
+  else
+    start &#x3e;&#x3e;&#x3e;= 0;
+
+  if (end === undefined)
+    end = target.length;
+  else if (end &#x3e; target.length)
+    throw new RangeError(&#x27;out of range index&#x27;);
+  else
+    end &#x3e;&#x3e;&#x3e;= 0;
+
+  if (thisStart === undefined)
+    thisStart = 0;
+  else if (thisStart &#x3c; 0)
+    throw new RangeError(&#x27;out of range index&#x27;);
+  else
+    thisStart &#x3e;&#x3e;&#x3e;= 0;
+
+  if (thisEnd === undefined)
+    thisEnd = this.length;
+  else if (thisEnd &#x3e; this.length)
+    throw new RangeError(&#x27;out of range index&#x27;);
+  else
+    thisEnd &#x3e;&#x3e;&#x3e;= 0;
+
+  if (thisStart &#x3e;= thisEnd)
+    return (start &#x3e;= end ? 0 : -1);
+  else if (start &#x3e;= end)
+    return 1;
+
+  return compareOffset(this, target, start, thisStart, end, thisEnd);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (arguments.length === 0) return utf8Slice(this, 0, length)
+return slowToString.apply(this, arguments)
+}
+
+Buffer.prototype.equals = function equals (b) {
+if (!Buffer.isBuffer(b)) throw new TypeError(&#x27;Argument must be a Buffer&#x27;)
+if (this === b) return true
+return Buffer.<span class="apidocCodeKeywordSpan">compare</span>(this, b) === 0
+}
+
+Buffer.prototype.inspect = function inspect () {
+var str = &#x27;&#x27;
+var max = exports.INSPECT_MAX_BYTES
+if (this.length &#x3e; 0) {
+  str = this.toString(&#x27;hex&#x27;, 0, max).match(/.{2}/g).join(&#x27; &#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.copy" id="apidoc.element.socket.io-stream.Buffer.prototype.copy">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>copy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copy() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (len &#x3e; value.byteLength - offset) {
+    throw new RangeError(&#x27;\&#x27;length\&#x27; is out of bounds&#x27;);
+  }
+  return new Buffer(value.slice(offset, offset + len));
+}
+if (Buffer.isBuffer(value)) {
+  var out = new Buffer(value.length);
+  value.<span class="apidocCodeKeywordSpan">copy</span>(out, 0, 0, value.length);
+  return out;
+}
+if (value) {
+  if (Array.isArray(value) || (typeof ArrayBuffer !== &#x27;undefined&#x27; &#x26;&#x26; value.buffer instanceof ArrayBuffer) || &#
+x27;length&#x27; in value) {
+    return new Buffer(value);
+  }
+  if (value.type === &#x27;Buffer&#x27; &#x26;&#x26; Array.isArray(value.data)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.equals" id="apidoc.element.socket.io-stream.Buffer.prototype.equals">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>equals
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equals(b) {
+  if (!(b instanceof Buffer))
+    throw new TypeError(&#x27;Argument must be a Buffer&#x27;);
+
+  if (this === b)
+    return true;
+
+  return binding.compare(this, b) === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.fill" id="apidoc.element.socket.io-stream.Buffer.prototype.fill">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>fill
+        <span class="apidocSignatureSpan">(val, start, end, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fill(val, start, end, encoding) {
+  // Handle string cases:
+  if (typeof val === &#x27;string&#x27;) {
+    if (typeof start === &#x27;string&#x27;) {
+      encoding = start;
+      start = 0;
+      end = this.length;
+    } else if (typeof end === &#x27;string&#x27;) {
+      encoding = end;
+      end = this.length;
+    }
+
+    if (encoding !== undefined &#x26;&#x26; typeof encoding !== &#x27;string&#x27;) {
+      throw new TypeError(&#x27;encoding must be a string&#x27;);
+    }
+    var normalizedEncoding = internalUtil.normalizeEncoding(encoding);
+    if (normalizedEncoding === undefined) {
+      throw new TypeError(&#x27;Unknown encoding: &#x27; + encoding);
+    }
+
+    if (val.length === 0) {
+      // Previously, if val === &#x27;&#x27;, the Buffer would not fill,
+      // which is rather surprising.
+      val = 0;
+    } else if (val.length === 1) {
+      var code = val.charCodeAt(0);
+      if ((normalizedEncoding === &#x27;utf8&#x27; &#x26;&#x26; code &#x3c; 128) ||
+          normalizedEncoding === &#x27;latin1&#x27;) {
+        // Fast path: If `val` fits into a single byte, use that numeric value.
+        val = code;
+      }
+    }
+  } else if (typeof val === &#x27;number&#x27;) {
+    val = val &#x26; 255;
+  }
+
+  // Invalid ranges are not set to a default, so can range check early.
+  if (start &#x3c; 0 || end &#x3e; this.length)
+    throw new RangeError(&#x27;Out of range index&#x27;);
+
+  if (end &#x3c;= start)
+    return this;
+
+  start = start &#x3e;&#x3e;&#x3e; 0;
+  end = end === undefined ? this.length : end &#x3e;&#x3e;&#x3e; 0;
+
+  binding.fill(this, val, start, end, encoding);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var fillBuf = new Buffer(_fill, enc);
+  var flen = fillBuf.length;
+  var i = -1;
+  while (++i &#x3c; size) {
+    buf[i] = fillBuf[i % flen];
+  }
+} else {
+  buf.<span class="apidocCodeKeywordSpan">fill</span>(_fill);
+}
+return buf;
+}
+exports.allocUnsafe = function allocUnsafe(size) {
+if (typeof Buffer.allocUnsafe === &#x27;function&#x27;) {
+  return Buffer.allocUnsafe(size);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.hexSlice" id="apidoc.element.socket.io-stream.Buffer.prototype.hexSlice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>hexSlice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hexSlice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.hexWrite" id="apidoc.element.socket.io-stream.Buffer.prototype.hexWrite">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>hexWrite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hexWrite() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.includes" id="apidoc.element.socket.io-stream.Buffer.prototype.includes">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>includes
+        <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function includes(val, byteOffset, encoding) {
+  return this.indexOf(val, byteOffset, encoding) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.indexOf" id="apidoc.element.socket.io-stream.Buffer.prototype.indexOf">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>indexOf
+        <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indexOf(val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Emits streams to this corresponding server/client.
+ *
+ * @return {Socket} self
+ * @api public
+ */
+Socket.prototype.emit = function(type) {
+  if (~exports.events.<span class="apidocCodeKeywordSpan">indexOf</span>(type)) {
+    return emit.apply(this, arguments);
+  }
+  this._stream.apply(this, arguments);
+  return this;
+};
+
+Socket.prototype.on = function(type, listener) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.inspect" id="apidoc.element.socket.io-stream.Buffer.prototype.inspect">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>inspect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inspect() {
+  var str = &#x27;&#x27;;
+  var max = exports.INSPECT_MAX_BYTES;
+  if (this.length &#x3e; 0) {
+    str = this.toString(&#x27;hex&#x27;, 0, max).match(/.{2}/g).join(&#x27; &#x27;);
+    if (this.length &#x3e; max)
+      str += &#x27; ... &#x27;;
+  }
+  return &#x27;&#x3c;&#x27; + this.constructor.name + &#x27; &#x27; + str + &#x27;&#x3e;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (ctx.customInspect &#x26;&#x26;
+    value &#x26;&#x26;
+    isFunction(value.inspect) &#x26;&#x26;
+    // Filter out the util module, it&#x27;s inspect function is special
+    value.inspect !== exports.inspect &#x26;&#x26;
+    // Also filter out any prototype objects using the circular check.
+    !(value.constructor &#x26;&#x26; value.constructor.prototype === value)) {
+  var ret = value.<span class="apidocCodeKeywordSpan">inspect</span>(recurseTimes, ctx);
+  if (!isString(ret)) {
+    ret = formatValue(ctx, ret, recurseTimes);
+  }
+  return ret;
+}
+
+// Primitive types cannot have properties
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.lastIndexOf" id="apidoc.element.socket.io-stream.Buffer.prototype.lastIndexOf">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>lastIndexOf
+        <span class="apidocSignatureSpan">(val, byteOffset, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lastIndexOf(val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.latin1Slice" id="apidoc.element.socket.io-stream.Buffer.prototype.latin1Slice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>latin1Slice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function latin1Slice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.latin1Write" id="apidoc.element.socket.io-stream.Buffer.prototype.latin1Write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>latin1Write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function latin1Write() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readDoubleBE" id="apidoc.element.socket.io-stream.Buffer.prototype.readDoubleBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readDoubleBE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readDoubleBE(offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 8, this.length);
+  return binding.readDoubleBE(this, offset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readDoubleLE" id="apidoc.element.socket.io-stream.Buffer.prototype.readDoubleLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readDoubleLE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readDoubleLE(offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 8, this.length);
+  return binding.readDoubleLE(this, offset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readFloatBE" id="apidoc.element.socket.io-stream.Buffer.prototype.readFloatBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readFloatBE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readFloatBE(offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+  return binding.readFloatBE(this, offset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readFloatLE" id="apidoc.element.socket.io-stream.Buffer.prototype.readFloatLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readFloatLE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readFloatLE(offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+  return binding.readFloatLE(this, offset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt16BE" id="apidoc.element.socket.io-stream.Buffer.prototype.readInt16BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt16BE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readInt16BE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 2, this.length);
+  var val = this[offset + 1] | (this[offset] &#x3c;&#x3c; 8);
+  return (val &#x26; 0x8000) ? val | 0xFFFF0000 : val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt16LE" id="apidoc.element.socket.io-stream.Buffer.prototype.readInt16LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt16LE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readInt16LE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 2, this.length);
+  var val = this[offset] | (this[offset + 1] &#x3c;&#x3c; 8);
+  return (val &#x26; 0x8000) ? val | 0xFFFF0000 : val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt32BE" id="apidoc.element.socket.io-stream.Buffer.prototype.readInt32BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt32BE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readInt32BE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+
+  return (this[offset] &#x3c;&#x3c; 24) |
+      (this[offset + 1] &#x3c;&#x3c; 16) |
+      (this[offset + 2] &#x3c;&#x3c; 8) |
+      (this[offset + 3]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt32LE" id="apidoc.element.socket.io-stream.Buffer.prototype.readInt32LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt32LE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readInt32LE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+
+  return (this[offset]) |
+      (this[offset + 1] &#x3c;&#x3c; 8) |
+      (this[offset + 2] &#x3c;&#x3c; 16) |
+      (this[offset + 3] &#x3c;&#x3c; 24);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readInt8" id="apidoc.element.socket.io-stream.Buffer.prototype.readInt8">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readInt8
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readInt8 = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 1, this.length);
+  var val = this[offset];
+  return !(val &#x26; 0x80) ? val : (0xff - val + 1) * -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readIntBE" id="apidoc.element.socket.io-stream.Buffer.prototype.readIntBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readIntBE
+        <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readIntBE = function (offset, byteLength, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, byteLength, this.length);
+
+  var i = byteLength;
+  var mul = 1;
+  var val = this[offset + --i];
+  while (i &#x3e; 0 &#x26;&#x26; (mul *= 0x100))
+    val += this[offset + --i] * mul;
+  mul *= 0x80;
+
+  if (val &#x3e;= mul)
+    val -= Math.pow(2, 8 * byteLength);
+
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readIntLE" id="apidoc.element.socket.io-stream.Buffer.prototype.readIntLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readIntLE
+        <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readIntLE = function (offset, byteLength, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, byteLength, this.length);
+
+  var val = this[offset];
+  var mul = 1;
+  var i = 0;
+  while (++i &#x3c; byteLength &#x26;&#x26; (mul *= 0x100))
+    val += this[offset + i] * mul;
+  mul *= 0x80;
+
+  if (val &#x3e;= mul)
+    val -= Math.pow(2, 8 * byteLength);
+
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt16BE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUInt16BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt16BE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUInt16BE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 2, this.length);
+  return (this[offset] &#x3c;&#x3c; 8) | this[offset + 1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+
+function read (buf, i) {
+  if (indexSize === 1) {
+    return buf[i]
+  } else {
+    return buf.<span class="apidocCodeKeywordSpan">readUInt16BE</span>(i * indexSize)
+  }
+}
+
+var i
+if (dir) {
+  var foundIndex = -1
+  for (i = byteOffset; i &#x3c; arrLength; i++) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt16LE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUInt16LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt16LE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUInt16LE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 2, this.length);
+  return this[offset] | (this[offset + 1] &#x3c;&#x3c; 8);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt32BE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUInt32BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt32BE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUInt32BE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+
+  return (this[offset] * 0x1000000) +
+      ((this[offset + 1] &#x3c;&#x3c; 16) |
+      (this[offset + 2] &#x3c;&#x3c; 8) |
+      this[offset + 3]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt32LE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUInt32LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt32LE
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUInt32LE = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 4, this.length);
+
+  return ((this[offset]) |
+      (this[offset + 1] &#x3c;&#x3c; 8) |
+      (this[offset + 2] &#x3c;&#x3c; 16)) +
+      (this[offset + 3] * 0x1000000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUInt8" id="apidoc.element.socket.io-stream.Buffer.prototype.readUInt8">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUInt8
+        <span class="apidocSignatureSpan">(offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUInt8 = function (offset, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, 1, this.length);
+  return this[offset];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUIntBE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUIntBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUIntBE
+        <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUIntBE = function (offset, byteLength, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, byteLength, this.length);
+
+  var val = this[offset + --byteLength];
+  var mul = 1;
+  while (byteLength &#x3e; 0 &#x26;&#x26; (mul *= 0x100))
+    val += this[offset + --byteLength] * mul;
+
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.readUIntLE" id="apidoc.element.socket.io-stream.Buffer.prototype.readUIntLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>readUIntLE
+        <span class="apidocSignatureSpan">(offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUIntLE = function (offset, byteLength, noAssert) {
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkOffset(offset, byteLength, this.length);
+
+  var val = this[offset];
+  var mul = 1;
+  var i = 0;
+  while (++i &#x3c; byteLength &#x26;&#x26; (mul *= 0x100))
+    val += this[offset + i] * mul;
+
+  return val;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.slice" id="apidoc.element.socket.io-stream.Buffer.prototype.slice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>slice
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function slice(start, end) {
+  const srcLength = this.length;
+  start = adjustOffset(start, srcLength);
+  end = end !== undefined ? adjustOffset(end, srcLength) : srcLength;
+  const newLength = end &#x3e; start ? end - start : 0;
+  return new FastBuffer(this.buffer, this.byteOffset + start, newLength);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  if (offset &#x3e;= value.byteLength) {
+    throw new RangeError(&#x27;\&#x27;offset\&#x27; is out of bounds&#x27;);
+  }
+  if (len &#x3e; value.byteLength - offset) {
+    throw new RangeError(&#x27;\&#x27;length\&#x27; is out of bounds&#x27;);
+  }
+  return new Buffer(value.<span class="apidocCodeKeywordSpan">slice</span>(offset, offset + len));
+}
+if (Buffer.isBuffer(value)) {
+  var out = new Buffer(value.length);
+  value.copy(out, 0, 0, value.length);
+  return out;
+}
+if (value) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.swap16" id="apidoc.element.socket.io-stream.Buffer.prototype.swap16">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap16
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function swap16() {
+  // For Buffer.length &#x3c; 128, it&#x27;s generally faster to
+  // do the swap in javascript. For larger buffers,
+  // dropping down to the native code is faster.
+  const len = this.length;
+  if (len % 2 !== 0)
+    throw new RangeError(&#x27;Buffer size must be a multiple of 16-bits&#x27;);
+  if (len &#x3c; 128) {
+    for (var i = 0; i &#x3c; len; i += 2)
+      swap(this, i, i + 1);
+    return this;
+  }
+  return swap16n(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.swap32" id="apidoc.element.socket.io-stream.Buffer.prototype.swap32">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap32
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function swap32() {
+  // For Buffer.length &#x3c; 192, it&#x27;s generally faster to
+  // do the swap in javascript. For larger buffers,
+  // dropping down to the native code is faster.
+  const len = this.length;
+  if (len % 4 !== 0)
+    throw new RangeError(&#x27;Buffer size must be a multiple of 32-bits&#x27;);
+  if (len &#x3c; 192) {
+    for (var i = 0; i &#x3c; len; i += 4) {
+      swap(this, i, i + 3);
+      swap(this, i + 1, i + 2);
+    }
+    return this;
+  }
+  return swap32n(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.swap64" id="apidoc.element.socket.io-stream.Buffer.prototype.swap64">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>swap64
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function swap64() {
+  // For Buffer.length &#x3c; 192, it&#x27;s generally faster to
+  // do the swap in javascript. For larger buffers,
+  // dropping down to the native code is faster.
+  const len = this.length;
+  if (len % 8 !== 0)
+    throw new RangeError(&#x27;Buffer size must be a multiple of 64-bits&#x27;);
+  if (len &#x3c; 192) {
+    for (var i = 0; i &#x3c; len; i += 8) {
+      swap(this, i, i + 7);
+      swap(this, i + 1, i + 6);
+      swap(this, i + 2, i + 5);
+      swap(this, i + 3, i + 4);
+    }
+    return this;
+  }
+  return swap64n(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.toJSON" id="apidoc.element.socket.io-stream.Buffer.prototype.toJSON">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  if (this.length) {
+    const data = [];
+    for (var i = 0; i &#x3c; this.length; ++i)
+      data[i] = this[i];
+    return { type: &#x27;Buffer&#x27;, data };
+  } else {
+    return { type: &#x27;Buffer&#x27;, data: [] };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.toString" id="apidoc.element.socket.io-stream.Buffer.prototype.toString">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  let result;
+  if (arguments.length === 0) {
+    result = this.utf8Slice(0, this.length);
+  } else {
+    result = slowToString.apply(this, arguments);
+  }
+  if (result === undefined)
+    throw new Error(&#x27;&#x22;toString()&#x22; failed&#x27;);
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+){
+return a           // if the placeholder was passed, return
+  ? (              // a random number from 0 to 15
+    a ^            // unless b is 8,
+    Math.random()  // in which case
+    * 16           // a random number from
+    &#x3e;&#x3e; a/4         // 8 to 11
+    ).<span class="apidocCodeKeywordSpan">toString</span>(16) // in hexadecimal
+  : (              // or otherwise a concatenated string:
+    [1e7] +        // 10000000 +
+    -1e3 +         // -1000 +
+    -4e3 +         // -4000 +
+    -8e3 +         // -80000000 +
+    -1e11          // -100000000000,
+    ).replace(     // replacing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.ucs2Slice" id="apidoc.element.socket.io-stream.Buffer.prototype.ucs2Slice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>ucs2Slice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ucs2Slice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.ucs2Write" id="apidoc.element.socket.io-stream.Buffer.prototype.ucs2Write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>ucs2Write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ucs2Write() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.utf8Slice" id="apidoc.element.socket.io-stream.Buffer.prototype.utf8Slice">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>utf8Slice
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function utf8Slice() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.utf8Write" id="apidoc.element.socket.io-stream.Buffer.prototype.utf8Write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>utf8Write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function utf8Write() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.write" id="apidoc.element.socket.io-stream.Buffer.prototype.write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>write
+        <span class="apidocSignatureSpan">(string, offset, length, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (string, offset, length, encoding) {
+  // Buffer#write(string);
+  if (offset === undefined) {
+    encoding = &#x27;utf8&#x27;;
+    length = this.length;
+    offset = 0;
+
+  // Buffer#write(string, encoding)
+  } else if (length === undefined &#x26;&#x26; typeof offset === &#x27;string&#x27;) {
+    encoding = offset;
+    length = this.length;
+    offset = 0;
+
+  // Buffer#write(string, offset[, length][, encoding])
+  } else if (isFinite(offset)) {
+    offset = offset &#x3e;&#x3e;&#x3e; 0;
+    if (isFinite(length)) {
+      length = length &#x3e;&#x3e;&#x3e; 0;
+      if (encoding === undefined)
+        encoding = &#x27;utf8&#x27;;
+    } else {
+      encoding = length;
+      length = undefined;
+    }
+  } else {
+    // if someone is still calling the obsolete form of write(), tell them.
+    // we don&#x27;t want eg buf.write(&#x22;foo&#x22;, &#x22;utf8&#x22;, 10) to silently turn into
+    // buf.write(&#x22;foo&#x22;, &#x22;utf8&#x22;), so we can&#x27;t ignore extra args
+    throw new Error(&#x27;Buffer.write(string, encoding, offset[, length]) &#x27; +
+                    &#x27;is no longer supported&#x27;);
+  }
+
+  var remaining = this.length - offset;
+  if (length === undefined || length &#x3e; remaining)
+    length = remaining;
+
+  if (string.length &#x3e; 0 &#x26;&#x26; (length &#x3c; 0 || offset &#x3c; 0))
+    throw new RangeError(&#x27;Attempt to write outside buffer bounds&#x27;);
+
+  if (!encoding)
+    encoding = &#x27;utf8&#x27;;
+
+  var loweredCase = false;
+  for (;;) {
+    switch (encoding) {
+      case &#x27;hex&#x27;:
+        return this.hexWrite(string, offset, length);
+
+      case &#x27;utf8&#x27;:
+      case &#x27;utf-8&#x27;:
+        return this.utf8Write(string, offset, length);
+
+      case &#x27;ascii&#x27;:
+        return this.asciiWrite(string, offset, length);
+
+      case &#x27;latin1&#x27;:
+      case &#x27;binary&#x27;:
+        return this.latin1Write(string, offset, length);
+
+      case &#x27;base64&#x27;:
+        // Warning: maxLength not taken into account in base64Write
+        return this.base64Write(string, offset, length);
+
+      case &#x27;ucs2&#x27;:
+      case &#x27;ucs-2&#x27;:
+      case &#x27;utf16le&#x27;:
+      case &#x27;utf-16le&#x27;:
+        return this.ucs2Write(string, offset, length);
+
+      default:
+        if (loweredCase)
+          throw new TypeError(&#x27;Unknown encoding: &#x27; + encoding);
+        encoding = (&#x27;&#x27; + encoding).toLowerCase();
+        loweredCase = true;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ss.Buffer
+
+[Node Buffer](https://nodejs.org/api/buffer.html) class to use on browser, which is exposed for convenience. On Node environment
+, you should just use normal `Buffer`.
+
+```js
+var stream = ss.createStream();
+stream.<span class="apidocCodeKeywordSpan">write</span>(new ss.Buffer([0, 1, 2]));
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleBE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeDoubleBE
+        <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeDoubleBE(val, offset, noAssert) {
+  val = +val;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    binding.writeDoubleBE(this, val, offset);
+  else
+    binding.writeDoubleBE(this, val, offset, true);
+  return offset + 8;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleLE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeDoubleLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeDoubleLE
+        <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeDoubleLE(val, offset, noAssert) {
+  val = +val;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    binding.writeDoubleLE(this, val, offset);
+  else
+    binding.writeDoubleLE(this, val, offset, true);
+  return offset + 8;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeFloatBE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeFloatBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeFloatBE
+        <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeFloatBE(val, offset, noAssert) {
+  val = +val;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    binding.writeFloatBE(this, val, offset);
+  else
+    binding.writeFloatBE(this, val, offset, true);
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeFloatLE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeFloatLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeFloatLE
+        <span class="apidocSignatureSpan">(val, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeFloatLE(val, offset, noAssert) {
+  val = +val;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    binding.writeFloatLE(this, val, offset);
+  else
+    binding.writeFloatLE(this, val, offset, true);
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt16BE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeInt16BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt16BE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeInt16BE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0x7fff, -0x8000);
+  this[offset] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset + 1] = value;
+  return offset + 2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt16LE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeInt16LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt16LE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeInt16LE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0x7fff, -0x8000);
+  this[offset] = value;
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 8);
+  return offset + 2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt32BE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeInt32BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt32BE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeInt32BE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000);
+  this[offset] = (value &#x3e;&#x3e;&#x3e; 24);
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 16);
+  this[offset + 2] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset + 3] = value;
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt32LE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeInt32LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt32LE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeInt32LE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000);
+  this[offset] = value;
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset + 2] = (value &#x3e;&#x3e;&#x3e; 16);
+  this[offset + 3] = (value &#x3e;&#x3e;&#x3e; 24);
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeInt8" id="apidoc.element.socket.io-stream.Buffer.prototype.writeInt8">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeInt8
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeInt8 = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 1, 0x7f, -0x80);
+  this[offset] = value;
+  return offset + 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeIntBE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeIntBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeIntBE
+        <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeIntBE = function (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert) {
+    checkInt(this,
+             value,
+             offset,
+             byteLength,
+             Math.pow(2, 8 * byteLength - 1) - 1,
+             -Math.pow(2, 8 * byteLength - 1));
+  }
+
+  var i = byteLength - 1;
+  var mul = 1;
+  var sub = 0;
+  this[offset + i] = value;
+  while (--i &#x3e;= 0 &#x26;&#x26; (mul *= 0x100)) {
+    if (value &#x3c; 0 &#x26;&#x26; sub === 0 &#x26;&#x26; this[offset + i + 1] !== 0)
+      sub = 1;
+    this[offset + i] = ((value / mul) &#x3e;&#x3e; 0) - sub;
+  }
+
+  return offset + byteLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeIntLE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeIntLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeIntLE
+        <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeIntLE = function (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert) {
+    checkInt(this,
+             value,
+             offset,
+             byteLength,
+             Math.pow(2, 8 * byteLength - 1) - 1,
+             -Math.pow(2, 8 * byteLength - 1));
+  }
+
+  var i = 0;
+  var mul = 1;
+  var sub = 0;
+  this[offset] = value;
+  while (++i &#x3c; byteLength &#x26;&#x26; (mul *= 0x100)) {
+    if (value &#x3c; 0 &#x26;&#x26; sub === 0 &#x26;&#x26; this[offset + i - 1] !== 0)
+      sub = 1;
+    this[offset + i] = ((value / mul) &#x3e;&#x3e; 0) - sub;
+  }
+
+  return offset + byteLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16BE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt16BE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUInt16BE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0xffff, 0);
+  this[offset] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset + 1] = value;
+  return offset + 2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16LE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUInt16LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt16LE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUInt16LE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 2, 0xffff, 0);
+  this[offset] = value;
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 8);
+  return offset + 2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32BE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32BE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt32BE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUInt32BE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0xffffffff, 0);
+  this[offset] = (value &#x3e;&#x3e;&#x3e; 24);
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 16);
+  this[offset + 2] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset + 3] = value;
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32LE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUInt32LE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt32LE
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUInt32LE = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 4, 0xffffffff, 0);
+  this[offset + 3] = (value &#x3e;&#x3e;&#x3e; 24);
+  this[offset + 2] = (value &#x3e;&#x3e;&#x3e; 16);
+  this[offset + 1] = (value &#x3e;&#x3e;&#x3e; 8);
+  this[offset] = value;
+  return offset + 4;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUInt8" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUInt8">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUInt8
+        <span class="apidocSignatureSpan">(value, offset, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUInt8 = function (value, offset, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert)
+    checkInt(this, value, offset, 1, 0xff, 0);
+  this[offset] = value;
+  return offset + 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUIntBE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUIntBE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUIntBE
+        <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUIntBE = function (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert) {
+    const maxBytes = Math.pow(2, 8 * byteLength) - 1;
+    checkInt(this, value, offset, byteLength, maxBytes, 0);
+  }
+
+  var i = byteLength - 1;
+  var mul = 1;
+  this[offset + i] = value;
+  while (--i &#x3e;= 0 &#x26;&#x26; (mul *= 0x100))
+    this[offset + i] = (value / mul) &#x3e;&#x3e;&#x3e; 0;
+
+  return offset + byteLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Buffer.prototype.writeUIntLE" id="apidoc.element.socket.io-stream.Buffer.prototype.writeUIntLE">
+        function <span class="apidocSignatureSpan">socket.io-stream.Buffer.prototype.</span>writeUIntLE
+        <span class="apidocSignatureSpan">(value, offset, byteLength, noAssert)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeUIntLE = function (value, offset, byteLength, noAssert) {
+  value = +value;
+  offset = offset &#x3e;&#x3e;&#x3e; 0;
+  byteLength = byteLength &#x3e;&#x3e;&#x3e; 0;
+  if (!noAssert) {
+    const maxBytes = Math.pow(2, 8 * byteLength) - 1;
+    checkInt(this, value, offset, byteLength, maxBytes, 0);
+  }
+
+  var mul = 1;
+  var i = 0;
+  this[offset] = value;
+  while (++i &#x3c; byteLength &#x26;&#x26; (mul *= 0x100))
+    this[offset + i] = (value / mul) &#x3e;&#x3e;&#x3e; 0;
+
+  return offset + byteLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.IOStream" id="apidoc.module.socket.io-stream.IOStream">module socket.io-stream.IOStream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.IOStream" id="apidoc.element.socket.io-stream.IOStream.IOStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>IOStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IOStream(options) {
+  if (!(this instanceof IOStream)) {
+    return new IOStream(options);
+  }
+
+  IOStream.super_.call(this, options);
+
+  this.options = options;
+  this.id = uuid();
+  this.socket = null;
+
+  // Buffers
+  this.pushBuffer = [];
+  this.writeBuffer = [];
+
+  // Op states
+  this._readable = false;
+  this._writable = false;
+  this.destroyed = false;
+
+  // default to *not* allowing half open sockets
+  this.allowHalfOpen = options &#x26;&#x26; options.allowHalfOpen || false;
+
+  this.on(&#x27;finish&#x27;, this._onfinish);
+  this.on(&#x27;end&#x27;, this._onend);
+  this.on(&#x27;error&#x27;, this._onerror);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.super_" id="apidoc.element.socket.io-stream.IOStream.super_">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex))
+    return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false)
+    this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false)
+    this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false)
+    this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.IOStream.prototype" id="apidoc.module.socket.io-stream.IOStream.prototype">module socket.io-stream.IOStream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._done" id="apidoc.element.socket.io-stream.IOStream.prototype._done">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_done
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_done = function () {
+  this._readable = false;
+
+  // signal the end of the data.
+  return this.push(null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @api private
+*/
+IOStream.prototype._end = function() {
+ if (this.pushBuffer.length) {
+   // end after flushing buffer.
+   this.pushBuffer.push(bind(this, &#x27;_done&#x27;));
+ } else {
+   this.<span class="apidocCodeKeywordSpan">_done</span>();
+ }
+};
+
+/**
+* Remote stream just ended
+*
+* @api private
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._end" id="apidoc.element.socket.io-stream.IOStream.prototype._end">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_end = function () {
+  if (this.pushBuffer.length) {
+    // end after flushing buffer.
+    this.pushBuffer.push(bind(this, &#x27;_done&#x27;));
+  } else {
+    this._done();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api private
+ */
+IOStream.prototype._onfinish = function() {
+debug(&#x27;_onfinish&#x27;);
+// Local socket just finished
+// send &#x27;end&#x27; event to remote
+if (this.socket) {
+  this.socket.<span class="apidocCodeKeywordSpan">_end</span>(this.id);
+}
+
+this.writable = false;
+this._writableState.ended = true;
+
+if (!this.readable || this._readableState.ended) {
+  debug(&#x27;_onfinish: ended, destroy %s&#x27;, this._readableState);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._onend" id="apidoc.element.socket.io-stream.IOStream.prototype._onend">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onend
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onend = function () {
+  debug(&#x27;_onend&#x27;);
+  this.readable = false;
+  this._readableState.ended = true;
+
+  if (!this.writable || this._writableState.finished) {
+    debug(&#x27;_onend: %s&#x27;, this._writableState);
+    return this.destroy();
+  }
+
+  debug(&#x27;_onend: not finished&#x27;);
+
+  if (!this.allowHalfOpen) {
+    this.end();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._onerror" id="apidoc.element.socket.io-stream.IOStream.prototype._onerror">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onerror
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onerror = function (err) {
+  // check if the error came from remote stream.
+  if (!err.remote &#x26;&#x26; this.socket) {
+    // notify the error to the corresponding remote stream.
+    this.socket._error(this.id, err);
+  }
+
+  this.destroy();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._onfinish" id="apidoc.element.socket.io-stream.IOStream.prototype._onfinish">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onfinish
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onfinish = function () {
+  debug(&#x27;_onfinish&#x27;);
+  // Local socket just finished
+  // send &#x27;end&#x27; event to remote
+  if (this.socket) {
+    this.socket._end(this.id);
+  }
+
+  this.writable = false;
+  this._writableState.ended = true;
+
+  if (!this.readable || this._readableState.ended) {
+    debug(&#x27;_onfinish: ended, destroy %s&#x27;, this._readableState);
+    return this.destroy();
+  }
+
+  debug(&#x27;_onfinish: not ended&#x27;);
+
+  if (!this.allowHalfOpen) {
+    this.push(null);
+
+    // just in case we&#x27;re waiting for an EOF.
+    if (this.readable &#x26;&#x26; !this._readableState.endEmitted) {
+      this.read(0);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._onread" id="apidoc.element.socket.io-stream.IOStream.prototype._onread">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onread
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onread = function (size) {
+  var write = this.writeBuffer.shift();
+  if (write) return write();
+
+  this._writable = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Socket.prototype._onread = function(id, size) {
+debug(&#x27;read: &#x22;%s&#x22;&#x27;, id);
+
+var stream = this.streams[id];
+if (stream) {
+  stream.<span class="apidocCodeKeywordSpan">_onread</span>(size);
+} else {
+  debug(&#x27;ignore invalid stream id&#x27;);
+}
+};
+
+Socket.prototype._onwrite = function(id, chunk, encoding, callback) {
+debug(&#x27;write: &#x22;%s&#x22;&#x27;, id);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._onwrite" id="apidoc.element.socket.io-stream.IOStream.prototype._onwrite">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_onwrite
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onwrite = function (chunk, encoding, callback) {
+  var self = this;
+
+  function push() {
+    self._readable = false;
+    var ret = self.push(chunk || &#x27;&#x27;, encoding);
+    callback();
+    return ret;
+  }
+
+  if (this._readable) {
+    push();
+  } else {
+    this.pushBuffer.push(push);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return;
+}
+
+if (global.ArrayBuffer &#x26;&#x26; chunk instanceof ArrayBuffer) {
+  // make sure that chunk is a buffer for stream
+  chunk = new Buffer(new Uint8Array(chunk));
+}
+stream.<span class="apidocCodeKeywordSpan">_onwrite</span>(chunk, encoding, callback);
+};
+
+Socket.prototype._onend = function(id) {
+debug(&#x27;end: &#x22;%s&#x22;&#x27;, id);
+
+var stream = this.streams[id];
+if (!stream) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._read" id="apidoc.element.socket.io-stream.IOStream.prototype._read">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_read
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (size) {
+  var push;
+
+  // We can not read from the socket if it&#x27;s destroyed obviously ...
+  if (this.destroyed) return;
+
+  if (this.pushBuffer.length) {
+    // flush buffer and end if it exists.
+    while (push = this.pushBuffer.shift()) {
+      if (!push()) break;
+    }
+    return;
+  }
+
+  this._readable = true;
+
+  // Go get data from remote stream
+  // Calls
+  // ._onread remotely
+  // then
+  // ._onwrite locally
+  this.socket._read(this.id, size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ this._readable = true;
+
+ // Go get data from remote stream
+ // Calls
+ // ._onread remotely
+ // then
+ // ._onwrite locally
+ this.socket.<span class="apidocCodeKeywordSpan">_read</span>(this.id, size);
+};
+
+
+/**
+* Read from remote stream
+*
+* @api private
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype._write" id="apidoc.element.socket.io-stream.IOStream.prototype._write">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+  var self = this;
+
+  function write() {
+    // We can not write to the socket if it&#x27;s destroyed obviously ...
+    if (self.destroyed) return;
+
+    self._writable = false;
+    self.socket._write(self.id, chunk, encoding, callback);
+  }
+
+  if (this._writable) {
+    write();
+  } else {
+    this.writeBuffer.push(write);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+
+function write() {
+  // We can not write to the socket if it&#x27;s destroyed obviously ...
+  if (self.destroyed) return;
+
+  self._writable = false;
+  self.socket.<span class="apidocCodeKeywordSpan">_write</span>(self.id, chunk, encoding, callback);
+}
+
+if (this._writable) {
+  write();
+} else {
+  this.writeBuffer.push(write);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.IOStream.prototype.destroy" id="apidoc.element.socket.io-stream.IOStream.prototype.destroy">
+        function <span class="apidocSignatureSpan">socket.io-stream.IOStream.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  debug(&#x27;destroy&#x27;);
+
+  if (this.destroyed) {
+    debug(&#x27;already destroyed&#x27;);
+    return;
+  }
+
+  this.readable = this.writable = false;
+
+  if (this.socket) {
+    debug(&#x27;clean up&#x27;);
+    this.socket.cleanup(this.id);
+    this.socket = null;
+  }
+
+  this.destroyed = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+this.writable = false;
+this._writableState.ended = true;
+
+if (!this.readable || this._readableState.ended) {
+  debug(&#x27;_onfinish: ended, destroy %s&#x27;, this._readableState);
+  return this.<span class="apidocCodeKeywordSpan">destroy</span>();
+}
+
+debug(&#x27;_onfinish: not ended&#x27;);
+
+if (!this.allowHalfOpen) {
+  this.push(null);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.Socket" id="apidoc.module.socket.io-stream.Socket">module socket.io-stream.Socket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.Socket" id="apidoc.element.socket.io-stream.Socket.Socket">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>Socket
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Socket(sio, options) {
+  if (!(this instanceof Socket)) {
+    return new Socket(sio, options);
+  }
+
+  EventEmitter.call(this);
+
+  options = options || {};
+
+  this.sio = sio;
+  this.forceBase64 = !!options.forceBase64;
+  this.streams = {};
+  this.encoder = new parser.Encoder();
+  this.decoder = new parser.Decoder();
+
+  var eventName = exports.event;
+  sio.on(eventName, bind(this, emit));
+  sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+  sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+  sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+  sio.on(eventName + &#x27;-error&#x27;, bind(this, &#x27;_onerror&#x27;));
+  sio.on(&#x27;error&#x27;, bind(this, emit, &#x27;error&#x27;));
+  sio.on(&#x27;disconnect&#x27;, bind(this, &#x27;_ondisconnect&#x27;));
+
+  this.encoder.on(&#x27;stream&#x27;, bind(this, &#x27;_onencode&#x27;));
+  this.decoder.on(&#x27;stream&#x27;, bind(this, &#x27;_ondecode&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.super_" id="apidoc.element.socket.io-stream.Socket.super_">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.Socket.prototype" id="apidoc.module.socket.io-stream.Socket.prototype">module socket.io-stream.Socket.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._end" id="apidoc.element.socket.io-stream.Socket.prototype._end">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_end
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_end = function (id) {
+  this.sio.emit(exports.event + &#x27;-end&#x27;, id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api private
+ */
+IOStream.prototype._onfinish = function() {
+debug(&#x27;_onfinish&#x27;);
+// Local socket just finished
+// send &#x27;end&#x27; event to remote
+if (this.socket) {
+  this.socket.<span class="apidocCodeKeywordSpan">_end</span>(this.id);
+}
+
+this.writable = false;
+this._writableState.ended = true;
+
+if (!this.readable || this._readableState.ended) {
+  debug(&#x27;_onfinish: ended, destroy %s&#x27;, this._readableState);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._error" id="apidoc.element.socket.io-stream.Socket.prototype._error">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_error
+        <span class="apidocSignatureSpan">(id, err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_error = function (id, err) {
+  this.sio.emit(exports.event + &#x27;-error&#x27;, id, err.message || err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @api private
+ */
+IOStream.prototype._onerror = function(err) {
+  // check if the error came from remote stream.
+  if (!err.remote &#x26;&#x26; this.socket) {
+    // notify the error to the corresponding remote stream.
+    this.socket.<span class="apidocCodeKeywordSpan">_error</span>(this.id, err);
+  }
+
+  this.destroy();
+};
+
+},{&#x22;./uuid&#x22;:7,&#x22;component-bind&#x22;:12,&#x22;debug&#x22;:14,&#x22;stream&#x22;:35,&#x22;util&#x22;:40}],5:[function
+(require,module,exports){
+var util = require(&#x27;util&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._ondecode" id="apidoc.element.socket.io-stream.Socket.prototype._ondecode">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_ondecode
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_ondecode = function (stream) {
+  var id = stream.id;
+  if (this.streams[id]) {
+    this._error(id, new Error(&#x27;Decoded stream already exists: &#x27; + id));
+    return;
+  }
+
+  this.streams[id] = stream;
+  stream.socket = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._ondisconnect" id="apidoc.element.socket.io-stream.Socket.prototype._ondisconnect">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_ondisconnect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_ondisconnect = function () {
+  var stream;
+  for (var id in this.streams) {
+    stream = this.streams[id];
+    stream.destroy();
+
+    // Close streams when the underlaying
+    // socket.io connection is closed (regardless why)
+    stream.emit(&#x27;close&#x27;);
+    stream.emit(&#x27;error&#x27;, new Error(&#x27;Connection aborted&#x27;));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onencode" id="apidoc.element.socket.io-stream.Socket.prototype._onencode">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onencode
+        <span class="apidocSignatureSpan">(stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onencode = function (stream) {
+  if (stream.socket || stream.destroyed) {
+    throw new Error(&#x27;stream has already been sent.&#x27;);
+  }
+
+  var id = stream.id;
+  if (this.streams[id]) {
+    throw new Error(&#x27;Encoded stream already exists: &#x27; + id);
+  }
+
+  this.streams[id] = stream;
+  stream.socket = this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onend" id="apidoc.element.socket.io-stream.Socket.prototype._onend">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onend
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onend = function (id) {
+  debug(&#x27;end: &#x22;%s&#x22;&#x27;, id);
+
+  var stream = this.streams[id];
+  if (!stream) {
+    debug(&#x27;ignore non-existent stream id: &#x22;%s&#x22;&#x27;, id);
+    return;
+  }
+
+  stream._end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onerror" id="apidoc.element.socket.io-stream.Socket.prototype._onerror">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onerror
+        <span class="apidocSignatureSpan">(id, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onerror = function (id, message) {
+  debug(&#x27;error: &#x22;%s&#x22;, &#x22;%s&#x22;&#x27;, id, message);
+
+  var stream = this.streams[id];
+  if (!stream) {
+    debug(&#x27;invalid stream id: &#x22;%s&#x22;&#x27;, id);
+    return;
+  }
+
+  var err = new Error(message);
+  err.remote = true;
+  stream.emit(&#x27;error&#x27;, err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onread" id="apidoc.element.socket.io-stream.Socket.prototype._onread">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onread
+        <span class="apidocSignatureSpan">(id, size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onread = function (id, size) {
+  debug(&#x27;read: &#x22;%s&#x22;&#x27;, id);
+
+  var stream = this.streams[id];
+  if (stream) {
+    stream._onread(size);
+  } else {
+    debug(&#x27;ignore invalid stream id&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Socket.prototype._onread = function(id, size) {
+debug(&#x27;read: &#x22;%s&#x22;&#x27;, id);
+
+var stream = this.streams[id];
+if (stream) {
+  stream.<span class="apidocCodeKeywordSpan">_onread</span>(size);
+} else {
+  debug(&#x27;ignore invalid stream id&#x27;);
+}
+};
+
+Socket.prototype._onwrite = function(id, chunk, encoding, callback) {
+debug(&#x27;write: &#x22;%s&#x22;&#x27;, id);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onstream" id="apidoc.element.socket.io-stream.Socket.prototype._onstream">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onstream
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onstream = function (type, listener) {
+  if (&#x27;function&#x27; != typeof listener) {
+    throw TypeError(&#x27;listener must be a function&#x27;);
+  }
+
+  function onstream() {
+    debug(&#x27;new streams&#x27;);
+    var self = this;
+    var args = slice.call(arguments);
+    var ack = args[args.length - 1];
+    if (&#x27;function&#x27; == typeof ack) {
+      args[args.length - 1] = function() {
+        var args = slice.call(arguments);
+        args = self.encoder.encode(args);
+        ack.apply(this, args);
+      };
+    }
+
+    args = this.decoder.decode(args);
+    listener.apply(this, args);
+  }
+
+  // for removeListener
+  onstream.listener = listener;
+
+  on.call(this, type, onstream);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Socket.prototype.on = function(type, listener) {
+ if (~exports.events.indexOf(type)) {
+   return on.apply(this, arguments);
+ }
+
+ this.<span class="apidocCodeKeywordSpan">_onstream</span>(type, listener);
+ return this;
+};
+
+/**
+* Sends a new stream request.
+*
+* @param {String} event type
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._onwrite" id="apidoc.element.socket.io-stream.Socket.prototype._onwrite">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_onwrite
+        <span class="apidocSignatureSpan">(id, chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onwrite = function (id, chunk, encoding, callback) {
+  debug(&#x27;write: &#x22;%s&#x22;&#x27;, id);
+
+  var stream = this.streams[id];
+  if (!stream) {
+    callback(&#x27;invalid stream id: &#x27; + id);
+    return;
+  }
+
+  if (global.ArrayBuffer &#x26;&#x26; chunk instanceof ArrayBuffer) {
+    // make sure that chunk is a buffer for stream
+    chunk = new Buffer(new Uint8Array(chunk));
+  }
+  stream._onwrite(chunk, encoding, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return;
+}
+
+if (global.ArrayBuffer &#x26;&#x26; chunk instanceof ArrayBuffer) {
+  // make sure that chunk is a buffer for stream
+  chunk = new Buffer(new Uint8Array(chunk));
+}
+stream.<span class="apidocCodeKeywordSpan">_onwrite</span>(chunk, encoding, callback);
+};
+
+Socket.prototype._onend = function(id) {
+debug(&#x27;end: &#x22;%s&#x22;&#x27;, id);
+
+var stream = this.streams[id];
+if (!stream) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._read" id="apidoc.element.socket.io-stream.Socket.prototype._read">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_read
+        <span class="apidocSignatureSpan">(id, size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (id, size) {
+  this.sio.emit(exports.event + &#x27;-read&#x27;, id, size);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ this._readable = true;
+
+ // Go get data from remote stream
+ // Calls
+ // ._onread remotely
+ // then
+ // ._onwrite locally
+ this.socket.<span class="apidocCodeKeywordSpan">_read</span>(this.id, size);
+};
+
+
+/**
+* Read from remote stream
+*
+* @api private
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._stream" id="apidoc.element.socket.io-stream.Socket.prototype._stream">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_stream
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_stream = function (type) {
+  debug(&#x27;sending new streams&#x27;);
+
+  var self = this;
+  var args = slice.call(arguments, 1);
+  var ack = args[args.length - 1];
+  if (&#x27;function&#x27; == typeof ack) {
+    args[args.length - 1] = function() {
+      var args = slice.call(arguments);
+      args = self.decoder.decode(args);
+      ack.apply(this, args);
+    };
+  }
+
+  args = this.encoder.encode(args);
+  var sio = this.sio;
+  sio.emit.apply(sio, [exports.event, type].concat(args));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype._write" id="apidoc.element.socket.io-stream.Socket.prototype._write">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>_write
+        <span class="apidocSignatureSpan">(id, chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (id, chunk, encoding, callback) {
+  if (Buffer.isBuffer(chunk)) {
+    if (this.forceBase64) {
+      encoding = &#x27;base64&#x27;;
+      chunk = chunk.toString(encoding);
+    } else if (!global.Buffer) {
+      // socket.io can&#x27;t handle Buffer when using browserify.
+      if (chunk.toArrayBuffer) {
+        chunk = chunk.toArrayBuffer();
+      } else {
+        chunk = chunk.buffer;
+      }
+    }
+  }
+  this.sio.emit(exports.event + &#x27;-write&#x27;, id, chunk, encoding, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var self = this;
+
+function write() {
+  // We can not write to the socket if it&#x27;s destroyed obviously ...
+  if (self.destroyed) return;
+
+  self._writable = false;
+  self.socket.<span class="apidocCodeKeywordSpan">_write</span>(self.id, chunk, encoding, callback);
+}
+
+if (this._writable) {
+  write();
+} else {
+  this.writeBuffer.push(write);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype.cleanup" id="apidoc.element.socket.io-stream.Socket.prototype.cleanup">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>cleanup
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cleanup = function (id) {
+  delete this.streams[id];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return;
+  }
+
+  this.readable = this.writable = false;
+
+  if (this.socket) {
+    debug(&#x27;clean up&#x27;);
+    this.socket.<span class="apidocCodeKeywordSpan">cleanup</span>(this.id);
+    this.socket = null;
+  }
+
+  this.destroyed = true;
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype.emit" id="apidoc.element.socket.io-stream.Socket.prototype.emit">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>emit
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (type) {
+  if (~exports.events.indexOf(type)) {
+    return emit.apply(this, arguments);
+  }
+  this._stream.apply(this, arguments);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var io = require(&#x27;socket.io-client&#x27;);
+var ss = require(&#x27;socket.io-stream&#x27;);
+
+var socket = io.connect(&#x27;http://example.com/user&#x27;);
+var stream = ss.createStream();
+var filename = &#x27;profile.jpg&#x27;;
+
+ss(socket).<span class="apidocCodeKeywordSpan">emit</span>(&#x27;profile-image&#x27;, stream, {name: filename});
+fs.createReadStream(filename).pipe(stream);
+```
+
+You can stream data from a client to server, and vice versa.
+
+```js
+// send data
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.Socket.prototype.on" id="apidoc.element.socket.io-stream.Socket.prototype.on">
+        function <span class="apidocSignatureSpan">socket.io-stream.Socket.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, listener) {
+  if (~exports.events.indexOf(type)) {
+    return on.apply(this, arguments);
+  }
+
+  this._onstream(type, listener);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Server:
+
+```js
+var io = require(&#x27;socket.io&#x27;).listen(80);
+var ss = require(&#x27;socket.io-stream&#x27;);
+var path = require(&#x27;path&#x27;);
+
+io.of(&#x27;/user&#x27;).<span class="apidocCodeKeywordSpan">on</span>(&#x27;connection&#x27;, function(socket) {
+  ss(socket).on(&#x27;profile-image&#x27;, function(stream, data) {
+    var filename = path.basename(data.name);
+    stream.pipe(fs.createWriteStream(filename));
+  });
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.blob_read_stream" id="apidoc.module.socket.io-stream.blob_read_stream">module socket.io-stream.blob_read_stream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.blob_read_stream.blob_read_stream" id="apidoc.element.socket.io-stream.blob_read_stream.blob_read_stream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>blob_read_stream
+        <span class="apidocSignatureSpan">(blob, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BlobReadStream(blob, options) {
+  if (!(this instanceof BlobReadStream)) {
+    return new BlobReadStream(blob, options);
+  }
+
+  Readable.call(this, options);
+
+  options = options || {};
+  this.blob = blob;
+  this.slice = blob.slice || blob.webkitSlice || blob.mozSlice;
+  this.start = 0;
+  this.sync = options.synchronous || false;
+
+  var fileReader;
+
+  if (options.synchronous) {
+    fileReader = this.fileReader = new FileReaderSync();
+  } else {
+    fileReader = this.fileReader = new FileReader();
+  }
+
+  fileReader.onload = bind(this, &#x27;_onload&#x27;);
+  fileReader.onerror = bind(this, &#x27;_onerror&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.blob_read_stream.super_" id="apidoc.element.socket.io-stream.blob_read_stream.super_">
+        function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Readable(options) {
+  if (!(this instanceof Readable))
+    return new Readable(options);
+
+  this._readableState = new ReadableState(options, this);
+
+  // legacy
+  this.readable = true;
+
+  if (options &#x26;&#x26; typeof options.read === &#x27;function&#x27;)
+    this._read = options.read;
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.blob_read_stream.prototype" id="apidoc.module.socket.io-stream.blob_read_stream.prototype">module socket.io-stream.blob_read_stream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._onerror" id="apidoc.element.socket.io-stream.blob_read_stream.prototype._onerror">
+        function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_onerror
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onerror = function (e) {
+  var err = e.target.error;
+  this.emit(&#x27;error&#x27;, err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._onload" id="apidoc.element.socket.io-stream.blob_read_stream.prototype._onload">
+        function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_onload
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onload = function (e) {
+  var chunk = new Buffer(new Uint8Array(e.target.result));
+  this.push(chunk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.blob_read_stream.prototype._read" id="apidoc.element.socket.io-stream.blob_read_stream.prototype._read">
+        function <span class="apidocSignatureSpan">socket.io-stream.blob_read_stream.prototype.</span>_read
+        <span class="apidocSignatureSpan">(size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_read = function (size) {
+  var start = this.start;
+  var end = this.start = this.start + size;
+  var chunk = this.slice.call(this.blob, start, end);
+
+  if (chunk.size) {
+    if (this.sync) {
+      var bufferChunk = new Buffer(new Uint8Array(this.fileReader.readAsArrayBuffer(chunk)));
+      this.push(bufferChunk);
+    } else {
+      this.fileReader.readAsArrayBuffer(chunk);
+    }
+  } else {
+    this.push(null);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ this._readable = true;
+
+ // Go get data from remote stream
+ // Calls
+ // ._onread remotely
+ // then
+ // ._onwrite locally
+ this.socket.<span class="apidocCodeKeywordSpan">_read</span>(this.id, size);
+};
+
+
+/**
+* Read from remote stream
+*
+* @api private
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.parser" id="apidoc.module.socket.io-stream.parser">module socket.io-stream.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.parser.Decoder" id="apidoc.element.socket.io-stream.parser.Decoder">
+        function <span class="apidocSignatureSpan">socket.io-stream.parser.</span>Decoder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decoder() {
+  EventEmitter.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+options = options || {};
+
+this.sio = sio;
+this.forceBase64 = !!options.forceBase64;
+this.streams = {};
+this.encoder = new parser.Encoder();
+this.decoder = new parser.<span class="apidocCodeKeywordSpan">Decoder</span>();
+
+var eventName = exports.event;
+sio.on(eventName, bind(this, emit));
+sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+sio.on(eventName + &#x27;-error&#x27;, bind(this, &#x27;_onerror&#x27;));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.parser.Encoder" id="apidoc.element.socket.io-stream.parser.Encoder">
+        function <span class="apidocSignatureSpan">socket.io-stream.parser.</span>Encoder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Encoder() {
+  EventEmitter.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+EventEmitter.call(this);
+
+options = options || {};
+
+this.sio = sio;
+this.forceBase64 = !!options.forceBase64;
+this.streams = {};
+this.encoder = new parser.<span class="apidocCodeKeywordSpan">Encoder</span>();
+this.decoder = new parser.Decoder();
+
+var eventName = exports.event;
+sio.on(eventName, bind(this, emit));
+sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.socket.io-stream.socket_io_stream" id="apidoc.module.socket.io-stream.socket_io_stream">module socket.io-stream.socket_io_stream</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.socket_io_stream" id="apidoc.element.socket.io-stream.socket_io_stream.socket_io_stream">
+        function <span class="apidocSignatureSpan">socket.io-stream.</span>socket_io_stream
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lookup(sio, options) {
+  options = options || {};
+  if (null == options.forceBase64) {
+    options.forceBase64 = exports.forceBase64;
+  }
+
+  if (!sio._streamSocket) {
+    sio._streamSocket = new Socket(sio, options);
+  }
+  return sio._streamSocket;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.Buffer" id="apidoc.element.socket.io-stream.socket_io_stream.Buffer">
+        function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>Buffer
+        <span class="apidocSignatureSpan">(arg, encodingOrOffset, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Buffer(arg, encodingOrOffset, length) {
+  if (!Buffer.TYPED_ARRAY_SUPPORT &#x26;&#x26; !(this instanceof Buffer)) {
+    return new Buffer(arg, encodingOrOffset, length)
+  }
+
+  // Common case.
+  if (typeof arg === &#x27;number&#x27;) {
+    if (typeof encodingOrOffset === &#x27;string&#x27;) {
+      throw new Error(
+        &#x27;If encoding is specified then the first argument must be a string&#x27;
+      )
+    }
+    return allocUnsafe(this, arg)
+  }
+  return from(this, arg, encodingOrOffset, length)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### ss.Buffer
+
+[Node Buffer](https://nodejs.org/api/buffer.html) class to use on browser, which is exposed for convenience. On Node environment
+, you should just use normal `Buffer`.
+
+```js
+var stream = ss.createStream();
+stream.write(new ss.<span class="apidocCodeKeywordSpan">Buffer</span>([0, 1, 2]));
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.IOStream" id="apidoc.element.socket.io-stream.socket_io_stream.IOStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>IOStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function IOStream(options) {
+  if (!(this instanceof IOStream)) {
+    return new IOStream(options);
+  }
+
+  IOStream.super_.call(this, options);
+
+  this.options = options;
+  this.id = uuid();
+  this.socket = null;
+
+  // Buffers
+  this.pushBuffer = [];
+  this.writeBuffer = [];
+
+  // Op states
+  this._readable = false;
+  this._writable = false;
+  this.destroyed = false;
+
+  // default to *not* allowing half open sockets
+  this.allowHalfOpen = options &#x26;&#x26; options.allowHalfOpen || false;
+
+  this.on(&#x27;finish&#x27;, this._onfinish);
+  this.on(&#x27;end&#x27;, this._onend);
+  this.on(&#x27;error&#x27;, this._onerror);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.Socket" id="apidoc.element.socket.io-stream.socket_io_stream.Socket">
+        function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>Socket
+        <span class="apidocSignatureSpan">(sio, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Socket(sio, options) {
+  if (!(this instanceof Socket)) {
+    return new Socket(sio, options);
+  }
+
+  EventEmitter.call(this);
+
+  options = options || {};
+
+  this.sio = sio;
+  this.forceBase64 = !!options.forceBase64;
+  this.streams = {};
+  this.encoder = new parser.Encoder();
+  this.decoder = new parser.Decoder();
+
+  var eventName = exports.event;
+  sio.on(eventName, bind(this, emit));
+  sio.on(eventName + &#x27;-read&#x27;, bind(this, &#x27;_onread&#x27;));
+  sio.on(eventName + &#x27;-write&#x27;, bind(this, &#x27;_onwrite&#x27;));
+  sio.on(eventName + &#x27;-end&#x27;, bind(this, &#x27;_onend&#x27;));
+  sio.on(eventName + &#x27;-error&#x27;, bind(this, &#x27;_onerror&#x27;));
+  sio.on(&#x27;error&#x27;, bind(this, emit, &#x27;error&#x27;));
+  sio.on(&#x27;disconnect&#x27;, bind(this, &#x27;_ondisconnect&#x27;));
+
+  this.encoder.on(&#x27;stream&#x27;, bind(this, &#x27;_onencode&#x27;));
+  this.decoder.on(&#x27;stream&#x27;, bind(this, &#x27;_ondecode&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.createBlobReadStream" id="apidoc.element.socket.io-stream.socket_io_stream.createBlobReadStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>createBlobReadStream
+        <span class="apidocSignatureSpan">(blob, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBlobReadStream = function (blob, options) {
+  return new BlobReadStream(blob, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  $(&#x27;#file&#x27;).change(function(e) {
+    var file = e.target.files[0];
+    var stream = ss.createStream();
+
+    // upload a file to the server.
+    ss(socket).emit(&#x27;file&#x27;, stream, {size: file.size});
+    ss.<span class="apidocCodeKeywordSpan">createBlobReadStream</span>(file).pipe(stream);
+  });
+});
+&#x3c;/script&#x3e;
+```
+
+#### Upload progress
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.socket.io-stream.socket_io_stream.createStream" id="apidoc.element.socket.io-stream.socket_io_stream.createStream">
+        function <span class="apidocSignatureSpan">socket.io-stream.socket_io_stream.</span>createStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createStream = function (options) {
+  return new IOStream(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Client:
+
+```js
+var io = require(&#x27;socket.io-client&#x27;);
+var ss = require(&#x27;socket.io-stream&#x27;);
+
+var socket = io.connect(&#x27;http://example.com/user&#x27;);
+var stream = ss.<span class="apidocCodeKeywordSpan">createStream</span>();
+var filename = &#x27;profile.jpg&#x27;;
+
+ss(socket).emit(&#x27;profile-image&#x27;, stream, {name: filename});
+fs.createReadStream(filename).pipe(stream);
+```
+
+You can stream data from a client to server, and vice versa.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
