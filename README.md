@@ -1,4 +1,7 @@
-# api documentation for  [socket.io-stream (v0.9.1)](https://github.com/nkzawa/socket.io-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-socket.io-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socket.io-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socket.io-stream.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socket.io-stream)
+# npmdoc-socket.io-stream
+
+#### basic api documentation for  [socket.io-stream (v0.9.1)](https://github.com/nkzawa/socket.io-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-socket.io-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-socket.io-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-socket.io-stream.svg)](https://travis-ci.org/npmdoc/node-npmdoc-socket.io-stream)
+
 #### stream for socket.io
 
 [![NPM](https://nodei.co/npm/socket.io-stream.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/socket.io-stream)
@@ -77,7 +80,8 @@
         "prepublish": "make build",
         "test": "make test"
     },
-    "version": "0.9.1"
+    "version": "0.9.1",
+    "bin": {}
 }
 ```
 
